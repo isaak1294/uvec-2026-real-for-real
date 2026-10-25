@@ -30,9 +30,12 @@ def parse(path):
     with open(path) as f:
         lines = [l.split() for l in f if l.strip()]
     n_vehicles = int(lines[0][0])
-    calls = []
+    calls, last = [], -1
     for i, tok in enumerate(lines[1:]):
         t, dur = parse_time(tok[0]), int(tok[-1])
+        if t < last:  # calls come in time order, none after midnight
+            sys.exit(f"error: {path}: call {i} at {tok[0]} is earlier than the call before it")
+        last = t
         x = y = 0
         mid = tok[1:-1]
         for k in range(0, len(mid), 2):
