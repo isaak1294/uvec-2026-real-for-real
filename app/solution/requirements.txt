@@ -1,0 +1,3 @@
+# Python >= 3.12 (numpy 2.5.x dropped 3.11)
+ortools==9.15.6755  # cpsat_dispatch.py
+numpy==2.5.4        # dispatcher.py
