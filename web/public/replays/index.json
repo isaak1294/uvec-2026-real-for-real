@@ -1,0 +1,136 @@
+{
+ "replays": [
+  {
+   "name": "edge_cases",
+   "file": "edge_cases.json",
+   "vehicles": 2,
+   "calls": 7,
+   "start": 0,
+   "end": 1481,
+   "stats": {
+    "standby": {
+     "calls": 7,
+     "total_delay": 114,
+     "max_delay": 50,
+     "travel": 168
+    },
+    "base": {
+     "calls": 7,
+     "total_delay": 108,
+     "max_delay": 50,
+     "travel": 170
+    }
+   }
+  },
+  {
+   "name": "example",
+   "file": "example.json",
+   "vehicles": 2,
+   "calls": 3,
+   "start": 645,
+   "end": 1475,
+   "stats": {
+    "standby": {
+     "calls": 3,
+     "total_delay": 44,
+     "max_delay": 35,
+     "travel": 126
+    },
+    "base": {
+     "calls": 3,
+     "total_delay": 44,
+     "max_delay": 35,
+     "travel": 88
+    }
+   }
+  },
+  {
+   "name": "large_city",
+   "file": "large_city.json",
+   "vehicles": 4,
+   "calls": 35,
+   "start": 372,
+   "end": 1469,
+   "stats": {
+    "standby": {
+     "calls": 35,
+     "total_delay": 728,
+     "max_delay": 59,
+     "travel": 1502
+    },
+    "base": {
+     "calls": 35,
+     "total_delay": 712,
+     "max_delay": 59,
+     "travel": 1180
+    }
+   }
+  },
+  {
+   "name": "rush_hour",
+   "file": "rush_hour.json",
+   "vehicles": 2,
+   "calls": 12,
+   "start": 482,
+   "end": 1468,
+   "stats": {
+    "standby": {
+     "calls": 12,
+     "total_delay": 1256,
+     "max_delay": 188,
+     "travel": 282
+    },
+    "base": {
+     "calls": 12,
+     "total_delay": 1256,
+     "max_delay": 188,
+     "travel": 232
+    }
+   }
+  },
+  {
+   "name": "single_vehicle",
+   "file": "single_vehicle.json",
+   "vehicles": 1,
+   "calls": 7,
+   "start": 480,
+   "end": 1440,
+   "stats": {
+    "standby": {
+     "calls": 7,
+     "total_delay": 462,
+     "max_delay": 104,
+     "travel": 118
+    },
+    "base": {
+     "calls": 7,
+     "total_delay": 462,
+     "max_delay": 104,
+     "travel": 118
+    }
+   }
+  },
+  {
+   "name": "typical_day",
+   "file": "typical_day.json",
+   "vehicles": 3,
+   "calls": 20,
+   "start": 435,
+   "end": 1464,
+   "stats": {
+    "standby": {
+     "calls": 20,
+     "total_delay": 344,
+     "max_delay": 35,
+     "travel": 742
+    },
+    "base": {
+     "calls": 20,
+     "total_delay": 409,
+     "max_delay": 36,
+     "travel": 748
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f5f6f8;
+  --foreground: #14161a;
+  --card: #ffffff;
+  --line: #e3e6eb;
+  --muted: #5b6472;
+  --map: #fafbfc;
+  --grid: #e9ecf0;
+  --axis: #d3d8de;
+  --waiting: #dc2626;
+  --done: #c3c8cf;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-line: var(--line);
+  --color-muted: var(--muted);
+  --color-map: var(--map);
+  --color-waiting: var(--waiting);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0e1013;
+    --foreground: #eceef1;
+    --card: #16191d;
+    --line: #2a2f36;
+    --muted: #9aa3ae;
+    --map: #121519;
+    --grid: #1f242a;
+    --axis: #333a42;
+    --waiting: #f05252;
+    --done: #4a515a;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+/* the time slider: a thin track the call ticks sit on, one round thumb */
+input[type="range"].timeline {
+  appearance: none;
+  background: transparent;
+  height: 28px;
+}
+input[type="range"].timeline::-webkit-slider-runnable-track {
+  height: 4px;
+  border-radius: 999px;
+  background: linear-gradient(to right, var(--foreground) var(--fill), var(--line) var(--fill));
+}
+input[type="range"].timeline::-moz-range-track {
+  height: 4px;
+  border-radius: 999px;
+  background: linear-gradient(to right, var(--foreground) var(--fill), var(--line) var(--fill));
+}
+input[type="range"].timeline::-webkit-slider-thumb {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  margin-top: -6px;
+  border-radius: 999px;
+  background: var(--foreground);
+  border: 3px solid var(--card);
+  box-shadow: 0 0 0 1px var(--foreground);
+}
+input[type="range"].timeline::-moz-range-thumb {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: var(--foreground);
+  border: 3px solid var(--card);
+  box-shadow: 0 0 0 1px var(--foreground);
+}
+input[type="range"].timeline:focus-visible {
+  outline: 2px solid var(--foreground);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
